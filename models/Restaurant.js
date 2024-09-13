@@ -23,8 +23,8 @@ const restaurantSchema = new mongoose.Schema({
 const Restaurant = mongoose.model("Restaurant", restaurantSchema)
 
 restaurantSchema.index({zipcode: 1})
-restaurantSchema.index({borough: 1})
 restaurantSchema.index({name: 1})
+
 mongoose.set('autoIndex', false)
 
 export default Restaurant;

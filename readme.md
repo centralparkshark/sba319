@@ -11,6 +11,15 @@
 - MongoDB
 - Mongoose
 
+## Routes
+### GET / READ
+- /restaurants
+- /restaurants/cuisines
+    - search by cuisine: /restaurants/cuisines?cuisine=African
+- /restaurants/locations
+    - search by borough /restaurants/locations?borough=Bronx
+    - search by zipcode /restaurants/locations/11234
+
 ## Requirements 
 - [] Use three different data collections
 - [] Reasonable data modeling practices
