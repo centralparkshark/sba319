@@ -6,7 +6,7 @@ const router = Router();
 router.get("/:zipcode", async (req, res) => {
     try {
         const {zipcode} = req.params;
-        const results = await Restaurant.find(zipcode);
+        const results = await Restaurant.find({"address.zipcode": zipcode});
         res.status(200).json(results)
     } catch (e) {
         res.status(500).send(e)
