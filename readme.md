@@ -15,9 +15,10 @@
 ### GET / READ
 - /posts
 - /posts/authors
-    - search by author: /posts/authors/:authorName
+    - search by author: /posts/authors/:authorname (ex: /posts/authors/machine)
 - /posts/tags
-    - search by tag /posts/tags?tag=china
+    - search by tag /posts/tags?tag=tagName (ex: /posts/tags?tag=China)
+- /routes?src=srcName&dst=dstName (ex: /routes?src=CEK&dst=KZN)
 
 ## Requirements 
 - [] Use three different data collections

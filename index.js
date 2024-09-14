@@ -1,7 +1,7 @@
 import express from 'express'
 import connectToDb from './db.js';
 import postRoutes from './routes/post.js'
-// import trainingRoutes from './routes/training.js'
+import routeRoutes from './routes/route.js'
 
 const PORT = 3000;
 const app = express()
@@ -10,7 +10,7 @@ app.use(express.json())
 connectToDb();
 
 app.use("/posts", postRoutes)
-// app.use("/training", trainingRoutes)
+app.use("/routes", routeRoutes)
 
 app.get("/", async (req, res) => {
 	try {
