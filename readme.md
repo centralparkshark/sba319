@@ -18,12 +18,17 @@
     - search by author: /posts/authors/:authorname (ex: /posts/authors/machine)
 - /posts/tags
     - search by tag /posts/tags?tag=tagName (ex: /posts/tags?tag=China)
+- /routes
+- /routes/airlines
 - /routes?src=srcName&dst=dstName (ex: /routes?src=CEK&dst=KZN)
+- /zips
+    - search by zipcode /zips/:zipcode
+    - search by state /zips?state=stateAbbreviation (ex: /zips?state=PA)
 
 ## Requirements 
-- [] Use three different data collections
-- [] Reasonable data modeling practices
-- [] GET routes for all data expressed to client using query commands
+- [X] Use three different data collections (posts, routes, zips)
+- [X] Reasonable data modeling practices
+- [X] GET routes for all data expressed to client using query commands
 - [] POST, using insertion (at least one w/ client creation)
 - [] PATCH or PUT, using update (at least one w/ client manipulation)
 - [] DELETE, using delete (at least one w/ client deletion)

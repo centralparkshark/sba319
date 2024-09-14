@@ -3,36 +3,6 @@ import Routes from '../models/Routes.js';
 
 const router = Router();
 
-// router.get("/tags", async (req, res) => {
-//     if (req.query.tag) {
-//         try {
-//             const tag = req.query.tag;
-//             const results = await Posts.find({tags: tag}).limit(10);
-//             res.json(results)
-//         } catch (e) {
-//             res.status(500).send(`Error finding ${req.query.tag}`)
-//         }
-//     } else {
-//         try {
-//             const tags = await Posts.distinct("tags");
-//             res.json(tags)
-//         } catch (e) {
-//             res.status(500).send("Server Error")
-//         }
-//     }
-    
-// });
-
-// router.get("/authors/:authorName", async (req, res) => {
-//     try {
-//         const {authorName} = req.params;
-//         const results = await Posts.find({author: authorName}).limit(10);
-//         res.json(results)
-//     } catch (e) {
-//         res.status(500).send("Server Error")
-//     }
-// });
-
 router.get("/airlines", async (req, res) => {
     try {
         const airlines = await Routes.distinct("airline.name");

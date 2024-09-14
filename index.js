@@ -2,6 +2,8 @@ import express from 'express'
 import connectToDb from './db.js';
 import postRoutes from './routes/post.js'
 import routeRoutes from './routes/route.js'
+import zipRoutes from './routes/zip.js'
+
 
 const PORT = 3000;
 const app = express()
@@ -11,6 +13,7 @@ connectToDb();
 
 app.use("/posts", postRoutes)
 app.use("/routes", routeRoutes)
+app.use("/zips", zipRoutes)
 
 app.get("/", async (req, res) => {
 	try {
