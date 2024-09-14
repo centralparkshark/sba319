@@ -42,6 +42,16 @@ router.get("/authors", async (req, res) => {
     }
 });
 
+router.get("/:id", async (req, res) => {
+    try {
+        const {id} = req.params;
+        const posts = await Posts.find({_id: id});
+        res.json(posts).status(200);
+    } catch (e) {
+        res.json(e).status(400)
+    }
+});
+
 router.get("/", async (req, res) => {
     try {
         const posts = await Posts.find({}).limit(20).select('title author date body');
@@ -50,6 +60,26 @@ router.get("/", async (req, res) => {
         res.json(e).status(400)
     }
 });
+
+router.post("/", async (req,res) => {
+    try {
+        const {body, author, title, tags} = req.body;
+
+        const newPost = new Post ({
+            body,
+            permalink: "rAndoMcHarACtErs",
+            author,
+            title,
+            tags,
+            date: new Date,
+        })
+ 
+        const savedPost = await newPost.save()
+        res.status(201).json(savedPost)
+    } catch (error) {
+        res.status(400).json({ message: "Error creating post", error: error.message });
+    }
+})
 
 
 export default router;

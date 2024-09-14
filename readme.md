@@ -32,13 +32,13 @@
 - [] POST, using insertion (at least one w/ client creation)
 - [] PATCH or PUT, using update (at least one w/ client manipulation)
 - [] DELETE, using delete (at least one w/ client deletion)
-- [] Sensible indexes for all fields queried frequently (make comments on those with a high write to read ratio)
+- [X] Sensible indexes for all fields queried frequently (make comments on those with a high write to read ratio)
 - [] Sensible MongoDB data validation rules for a least one data collection
-- [] use Mongoose
-- [] Utilize reasonable code organization practices
-- [] Runs without errors
-- [] Commit frequently
-- [] README, includes description of avaiable routes and correspodning CRUD operations for reference
-- [] Level of Effort
+- [X] Use Mongoose
+- [X] Utilize reasonable code organization practices
+- [X] Runs without errors
+- [X] Commit frequently
+- [X] README, includes description of avaiable routes and correspodning CRUD operations for reference
+- [X] Level of Effort
 
 
