@@ -13,12 +13,11 @@
 
 ## Routes
 ### GET / READ
-- /restaurants
-- /restaurants/cuisines
-    - search by cuisine: /restaurants/cuisines?cuisine=African
-- /restaurants/locations
-    - search by borough /restaurants/locations?borough=Bronx
-    - search by zipcode /restaurants/locations/11234
+- /posts
+- /posts/authors
+    - search by author: /posts/authors/:authorName
+- /posts/tags
+    - search by tag /posts/tags?tag=china
 
 ## Requirements 
 - [] Use three different data collections
