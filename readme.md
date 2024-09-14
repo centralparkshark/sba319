@@ -24,12 +24,18 @@
 - /zips
     - search by zipcode /zips/:zipcode
     - search by state /zips?state=stateAbbreviation (ex: /zips?state=PA)
+### POST / CREATE\
+- /posts - create new post
+### PATCH / UPDATE
+- /posts/:id - update any field within document with that id
+### DELETE / DELETE
+
 
 ## Requirements 
 - [X] Use three different data collections (posts, routes, zips)
 - [X] Reasonable data modeling practices
 - [X] GET routes for all data expressed to client using query commands
-- [] POST, using insertion (at least one w/ client creation)
+- [X] POST, using insertion (at least one w/ client creation)
 - [] PATCH or PUT, using update (at least one w/ client manipulation)
 - [] DELETE, using delete (at least one w/ client deletion)
 - [X] Sensible indexes for all fields queried frequently (make comments on those with a high write to read ratio)

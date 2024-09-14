@@ -52,6 +52,29 @@ router.get("/:id", async (req, res) => {
     }
 });
 
+router.patch("/:id", async (req,res) => {
+    try {
+        const {id} = req.params;
+        const updatedPost = await Posts.findByIdAndUpdate(
+            id, { $set: req.body }, {new: true}
+            
+        )
+        res.status(200).json(updatedPost)
+    } catch (error) {
+        res.status(500).json({ message: "Error editing post", error: error.message });
+    }
+})
+
+router.delete("/:id", async (req,res) => {
+    try {
+        const {id} = req.params;
+        const updatedPost = await Posts.findByIdAndDelete(id)
+        res.status(200).json("Post deleted.")
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting post", error: error.message });
+    }
+})
+
 router.get("/", async (req, res) => {
     try {
         const posts = await Posts.find({}).limit(20).select('title author date body');
@@ -65,7 +88,7 @@ router.post("/", async (req,res) => {
     try {
         const {body, author, title, tags} = req.body;
 
-        const newPost = new Post ({
+        const newPost = new Posts ({
             body,
             permalink: "rAndoMcHarACtErs",
             author,
