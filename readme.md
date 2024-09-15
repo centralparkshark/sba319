@@ -29,6 +29,7 @@
 ### PATCH / UPDATE
 - /posts/:id - update any field within document with that id
 ### DELETE / DELETE
+- /posts/:id - delete entire post
 
 
 ## Requirements 
@@ -36,10 +37,10 @@
 - [X] Reasonable data modeling practices
 - [X] GET routes for all data expressed to client using query commands
 - [X] POST, using insertion (at least one w/ client creation)
-- [] PATCH or PUT, using update (at least one w/ client manipulation)
-- [] DELETE, using delete (at least one w/ client deletion)
+- [X] PATCH or PUT, using update (at least one w/ client manipulation)
+- [X] DELETE, using delete (at least one w/ client deletion)
 - [X] Sensible indexes for all fields queried frequently (make comments on those with a high write to read ratio)
-- [] Sensible MongoDB data validation rules for a least one data collection
+- [X] Sensible MongoDB data validation rules for a least one data collection
 - [X] Use Mongoose
 - [X] Utilize reasonable code organization practices
 - [X] Runs without errors
